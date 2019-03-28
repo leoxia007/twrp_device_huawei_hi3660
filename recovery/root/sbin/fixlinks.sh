@@ -1,11 +1,11 @@
 #!/sbin/sh
 
-if [ -d /dev/block/platform/ff3c0000.ufs ]; then
+if [ -d /dev/block/platform/ff3b0000.ufs ]; then
     echo "using ufs"
-    ln -sf /dev/block/platform/ff3c0000.ufs /dev/block/bootdevice
+    ln -sf /dev/block/platform/ff3b0000.ufs /dev/block/bootdevice
 else
     echo "using emmc"
-    ln -sf /dev/block/platform/hi_mci.0 /dev/block/bootdevice
+    ln -sf /dev/block/platform/hi_mci.1 /dev/block/bootdevice
 fi
 
 # Creates new symlinks without the _a in them since this device does
