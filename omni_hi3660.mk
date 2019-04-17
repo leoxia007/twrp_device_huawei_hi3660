@@ -34,6 +34,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/huawei/hi3660/dummykernel:kernel
 
+# Properties
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=manufacture,adb,mtp \
+    ro.sys.usb.storage.type=mtp,adb \
+    sys.usb.configfs=1 \
+    sys.usb.controller=ff100000.dwc3
+
 PRODUCT_NAME := omni_hi3660
 PRODUCT_DEVICE := hi3660
 PRODUCT_BRAND := Huawei
